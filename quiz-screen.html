@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz — UniQuiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Uni<span>Quiz</span></div>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="courses.html">Courses</a>
+  </div>
+</nav>
+
+<!-- QUIZ SCREEN -->
+<div class="screen" id="quiz-screen">
+  <div class="quiz-container">
+    <div class="quiz-top">
+      <div class="quiz-course-tag" id="quiz-course-tag">CSC 204</div>
+      <div class="quiz-progress-text">Question <span id="q-current">1</span> of <span id="q-total">30</span></div>
+    </div>
+    <div class="progress-bar-wrap">
+      <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+    </div>
+    <div class="question-num" id="q-num-label">Question 1</div>
+    <div class="question-text" id="q-text">Loading...</div>
+    <div class="options-list" id="options-list"></div>
+    <div class="nav-buttons">
+      <button class="btn-outline" id="prev-btn" onclick="prevQuestion()" disabled>Previous</button>
+      <button class="btn-solid" id="next-btn" onclick="nextQuestion()">Next</button>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS SCREEN -->
+<div class="screen" id="results-screen">
+  <div class="results-container">
+    <div class="results-hero">
+      <div class="results-name" id="r-name">Student Name</div>
+      <div class="results-score-big" id="r-score">0/30</div>
+      <div class="results-score-sub" id="r-pct">0% correct</div>
+      <span class="results-verdict" id="r-verdict">Pass</span>
+    </div>
+    <div class="scoresheet-title">Full Scoresheet</div>
+    <div class="scoresheet" id="scoresheet"></div>
+    <div class="results-actions">
+      <button class="btn-outline" onclick="goHome()">Back to Home</button>
+      <button class="btn-solid" id="retake-btn" onclick="retakeQuiz()">Retake Quiz</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
